@@ -12,7 +12,7 @@
 - **报文交换：分而制之**
 - **分组交换：多路复用**
 
-![image-20220310201120996](https://tva1.sinaimg.cn/large/e6c9d24ely1h051pad65yj20o10i640d.jpg)
+![信息三种交换](https://tva1.sinaimg.cn/large/e6c9d24ely1h0svh9npcej20ri0jgabw.jpg)
 
 ## HTTP 诞生背景
 
@@ -82,6 +82,8 @@ Tim 的第一个网站上线后，大家都很喜欢这种共享的文件与知�
 如果这样做的话，就收端收到的就会是多个文件混合后的 chunks,我们还有想个办法把这些混合的 chunks 区分开来，再进行组合得到一份完整的文件。那如何把混合在一起的 chunks 区分呢？
 
 你是不已经想到了，那就是在把文件生成成 chunks 时，给每份 chunk 都打个 tag,这个 tag 又是和文件相关联，实际操作时是给了同一个文件生成的 chunks 一个相同的 ID,接受端按 ID 来区分 chunks 并归类，组合成完整的文件。这就是 2.0 的**多路复用**。
+
+![multiplexing](https://tva1.sinaimg.cn/large/e6c9d24ely1h0svi2r9uwj222y0ljae9.jpg)
 
 当然从 1997 年到 2015 这 10 多年的时间，不可能只新增了一个多路复用啥，2.0 还做了些其它的优化：
 
